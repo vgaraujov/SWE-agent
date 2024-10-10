@@ -309,7 +309,7 @@ class OpenPRHook(MainHook):
 
 class Main:
     def __init__(self, args: ScriptArguments):
-        self.traj_dir = Path("trajectories") / Path(getuser()) / args.run_name
+        self.traj_dir = Path("trajectories") #/ Path(getuser()) / args.run_name
         self.traj_dir.mkdir(parents=True, exist_ok=True)
         timestamp = datetime.datetime.now().strftime("%y%m%d%H%M%S")
         log_path = self.traj_dir / f"run-{timestamp}.log"
